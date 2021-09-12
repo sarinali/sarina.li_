@@ -1,48 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.0.0/kute.min.js"></script>
 </head>
+
 <body>
+    <div class="curve">
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(404.0963558073536 297.34088004366095)">
+                <path id= "blobl1"
+                    d="M113.6 -156.4C159.1 -147.5 216 -136.1 231.5 -104.9C246.9 -73.7 221 -22.9 207.2 25.4C193.5 73.7 192 119.4 166.7 139.3C141.4 159.3 92.4 153.5 50.8 159.8C9.1 166 -25.2 184.2 -54.9 179.1C-84.7 174 -110 145.6 -124.8 115.4C-139.7 85.3 -144.1 53.3 -144.4 23.3C-144.8 -6.7 -141.1 -34.7 -134.8 -67C-128.5 -99.3 -119.7 -135.9 -96.8 -155.1C-73.9 -174.3 -36.9 -176.2 -1.4 -173.9C34.1 -171.7 68.1 -165.3 113.6 -156.4"
+                    fill="#b6e7f0">
+                </path>
+            </g>
+            <g transform="translate(463.6304516022085 280.7624143931114)" style="visibility: hidden;">
+                <path id="blob2"
+                    d="M122.5 -189.1C146.6 -175.1 145.6 -120.6 161.4 -76.5C177.3 -32.4 209.9 1.2 205.3 29.2C200.7 57.1 158.9 79.3 129.8 112C100.7 144.7 84.3 188 53.2 210.6C22.1 233.2 -23.8 235.1 -71.1 227.8C-118.4 220.4 -167.3 203.9 -184.6 168.5C-201.8 133.2 -187.5 79 -197 27C-206.4 -24.9 -239.7 -74.8 -231.8 -111.6C-223.9 -148.4 -174.9 -172.2 -129.5 -176.4C-84 -180.7 -42 -165.3 3.6 -171C49.2 -176.6 98.4 -203.1 122.5 -189.1"
+                    fill="#b6e7f0"></path>
+            </g>
+        </svg>
+    </div>
+
     <div class="navigation">
         <ul>
-            <li class="list">
+            <li class="list active">
                 <a href="#">
-                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </span>
                     <span class="title">Home</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
-                    <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <span class="title">About Me</span>
+                    <span class="icon">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                    </span>
+                    <span class="title">About</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
-                    <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+                    <span class="icon">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                    </span>
                     <span class="title">Resume</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
-                    <span class="icon"><ion-icon name="folder-outline"></ion-icon></span>
-                    <span class="title">Projects and Contests</span>
+                    <span class="icon">
+                        <ion-icon name="folder-outline"></ion-icon>
+                    </span>
+                    <span class="title">Projects</span>
                 </a>
             </li>
             <li class="list">
                 <a href="#">
-                    <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                    <span class="icon">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </span>
                     <span class="title">Contact</span>
                 </a>
             </li>
         </ul>
     </div>
+
+    <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+    </div>
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        // var KUTE = require("kute.js");
+        const tween = KUTE.fromTo(
+            '#blob1',
+            {path: "#blobl1"},
+            {path: "#blobl2"},
+            {repeat: 999, duration: 3000, yoyo: true}
+        )
+
+        tween.start();
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector(".navigation");
+        menuToggle.onclick = function () {
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        let list = document.querySelectorAll('.list');
+        for (let i = 0; i < list.length; i++) {
+            list[i].onclick = function () {
+                let j = 0;
+                while (j < list.length) {
+                    list[j++].className = "list";
+                }
+                list[i].className = "list active";
+            }
+        }
+    </script>
 </body>
+
 </html>
