@@ -8,6 +8,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: "SFBold";  
+/* height: 100%; */
 }
 
 .navigation {
@@ -123,3 +124,13 @@ font-family: "SFBold";
     display: none;
 }
 
+section {
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.firstBlobMorph {
+    height: 100px;
+}
