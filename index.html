@@ -7,27 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="anime.min.js"></script>
-    
+    <!-- <script src="anime.min.js"></script> -->
+
     <!-- <script src="kute.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/kute.js@2.0.0/kute.min.js"></script> -->
 </head>
 
 <body>
-    <div class="firstBlobMorph">
-        <svg id="blob1"viewBox = "0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="blob1" >
-            <path fill="#D0E2FF"
-            class="firstBlob"
-                d="M25.8,-16C38.5,-13.2,57.2,-6.6,57.2,-0.1C57.1,6.5,38.3,13,25.6,22.5C13,32,6.5,44.5,-8.4,52.9C-23.3,61.3,-46.7,65.7,-55.9,56.2C-65.1,46.7,-60.2,23.3,-54.5,5.7C-48.8,-11.9,-42.2,-23.8,-33,-26.6C-23.8,-29.4,-11.9,-23.1,-2.6,-20.5C6.6,-17.8,13.2,-18.8,25.8,-16Z"
-                transform="translate(100 100)", />
-        </svg>
-    </div>
+    <!--FIX THE VIEW BOX!!-->
+        
+    <div class="firstBlobMorph"></div>
+    
+    <svg viewBox="0 0 200 450" class="lightblueblob" id="blob1" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#D0E2FF" class="firstBlob"
+        d="M50,7.6C50,29.5,25,59,-3,59C-31,59,-62,29.5,-62,7.6C-62,-14.4,-31,-28.7,-3,-28.7C25,-28.7,50,-14.4,50,7.6Z"
+        transform="translate(100 100)" , />
+        <path fill="#a9bac7" class="secondBlob"
+        d="M50,7.6C50,29.5,25,59,-3,59C-31,59,-62,29.5,-62,7.6C-62,-14.4,-31,-28.7,-3,-28.7C25,-28.7,50,-14.4,50,7.6Z" style="transform: translateY(20%); transform: rotate(180deg); transform: scale(1.5);" />
+        <path fill="#bacbe6" class="thirdBlob"
+        d="M50,7.6C50,29.5,25,59,-3,59C-31,59,-62,29.5,-62,7.6C-62,-14.4,-31,-28.7,-3,-28.7C25,-28.7,50,-14.4,50,7.6Z" style=" transform: translateY(50%) translateX(100%) scale(1.5) rotate(60deg)" />
+    </svg>
 
-    <div class="SecondBlobMorph">
-        <svg viewBox="70 -50 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#a9bac7" d="M26.6,-20.6C39.8,-13.4,59.4,-6.7,66.6,7.2C73.8,21.2,68.7,42.4,55.6,57.7C42.4,73.1,21.2,82.6,7.2,75.4C-6.8,68.1,-13.6,44.2,-28.7,28.9C-43.7,13.6,-67.2,6.8,-73,-5.8C-78.7,-18.3,-66.9,-36.7,-51.8,-43.8C-36.7,-51,-18.3,-47,-5.8,-41.2C6.7,-35.3,13.4,-27.8,26.6,-20.6Z" transform="translate(100 100)" />
-          </svg>
-    </div>
+
 
     <div class="navigation">
         <ul>
@@ -83,15 +84,6 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
-        // var KUTE = require("kute.js");
-        // const tween = KUTE.fromTo(
-        //     '#blob1',
-        //     {path: "#blobl1"},
-        //     {path: "#blobl2"},
-        //     {repeat: 999, duration: 3000, yoyo: true}
-        // )
-
-        // tween.start();
         let menuToggle = document.querySelector('.toggle');
         let navigation = document.querySelector(".navigation");
         menuToggle.onclick = function () {

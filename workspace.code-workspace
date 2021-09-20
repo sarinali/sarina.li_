@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\anime-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sarina-li"
+	}
+}
