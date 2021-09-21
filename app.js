@@ -14,7 +14,7 @@ const blobPath3 = "M66.1,-1.2C66.1,14.9,33.1,29.8,7.8,29.8C-17.4,29.8,-34.8,14.9
         delay: anime.stagger(2000),
     });
     timeline.add({
-        targets: ".firstBlob, .secondBlob, .thirdBlob, .fourthBlob, .fifthBlob, .sixthBlob",
+        targets: ".firstBlob, .secondBlob, .thirdBlob, .fourthBlob, .fifthBlob, .sixthBlob, .seventhBlob",
         d: [
             {value: blobPath2},
             {value: blobPath1},

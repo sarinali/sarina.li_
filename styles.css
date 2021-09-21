@@ -145,27 +145,6 @@ section {
     display: flex;
 }
 
-/* .firstBlobMorph {
-    height: 60px;
-    width: 100%;
-} */
-
-/* .firstBlobMorph {
-    position: relative; 
-    height: 0; 
-    width: 100%; 
-    padding: 0;
-    padding-bottom: 100%;
-}
-
-.lightblueblob {
-    position: absolute; 
-    height: 100%; 
-    width: 100%; 
-    left: 0; 
-    top: 0;
-} */
-
 .text {
     position: absolute;
     font-size: 3em;
@@ -186,14 +165,14 @@ section {
     .text {
         font-size: 5em;
         }
-    }
+}
 
 @media only screen and (min-device-width: 600px) and (max-device-width: 2200px) {
     .name {
         font-size: 2em;
         margin-top: 300px;
     }
-    }
+}
 
 .text:hover {
     color: #325b70;
@@ -211,3 +190,46 @@ section {
     width: 100%;
 } 
 
+.mediawrapper {
+    position: absolute;
+    height: auto;
+    /* width: 100px; */
+    /* background-color: black; */
+    margin-left: 21%;
+    margin-top: 320px;
+    font-size: 1.5em;
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 2200px) {
+    .mediawrapper {
+        font-size: 2.2em;
+        margin-top: 360px;
+    }
+}
+
+.fa {
+    padding-right: 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+.fa:hover {
+    opacity: 0.7;
+    transform: translateY(-5%);
+}
+
+.description {
+    position: absolute;
+    margin-left: 21%;
+    margin-top: 390px;
+    color: rgb(138, 138, 138);
+    margin-right: 30%;
+
+}
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 2200px) {
+    .description {
+        font-size: 1em;
+        margin-top: 460px;
+    }
+}
