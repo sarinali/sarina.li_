@@ -14,22 +14,25 @@
 
 .navigation {
     position: fixed;
+    z-index: 1;
     top: 20px;
-    left: 20px;
+    left: 2%;
     bottom: 20px;
     width: 40px;
     border-radius: 10px;
     box-sizing: initial;
-    background: #79acc7;
+    background: #9da8b3;
     transition: width 0.8s;
     overflow: hidden;
 }
 
 .navigation.active {
     width: 50%;
+    z-index: 1;
 }
 .navigation ul {
     position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%; 
@@ -38,6 +41,7 @@
 }
 .navigation ul li {
     position: relative;
+    z-index: 1;
     list-style: none;
     width: 100%;
     border-top-left-radius: 20px;
@@ -45,18 +49,26 @@
 }
 .navigation ul li a {
     position: relative;
+    z-index: 1;
     display: block;
     width: 100%;
     display: flex;
     text-decoration: none;
     color: white;
+    transition: all 0.3s ease 0s;
+    /* pointer-events: fill; */
+}
+.navigation ul li a:hover {
+    color: black;
 }
 .navigation ul li.active {
     background: white;
+    z-index: 1;
 }
 
 .navigation ul li.active a {
     color: #333;
+    z-index: 1;
 }
 
 .navigation ul li a .icon {
@@ -71,7 +83,7 @@
 
 .navigation ul li a .icon ion-icon {
     font-size: 150%;
-    
+    pointer-events: none;
 }
 
 .navigation ul li a .title {
@@ -89,7 +101,7 @@
     right: 20px;
     width: 50px;
     height: 50px;
-    background: #79acc7;
+    background: #9da8b3;
     border-radius: 10px;
     cursor: pointer;
     justify-content: center;
@@ -153,3 +165,49 @@ section {
     left: 0; 
     top: 0;
 } */
+
+.text {
+    position: absolute;
+    font-size: 3em;
+    margin-left: 20%;
+    margin-top: 200px;
+    transition: 0.5s;
+    color: #333;
+} 
+
+.name {
+    position: absolute;
+    font-size: 1.5em;
+    margin-left: 21%;
+    margin-top: 270px;
+    transition: 0.5s;
+}
+@media only screen and (min-device-width: 600px) and (max-device-width: 2200px) {
+    .text {
+        font-size: 5em;
+        }
+    }
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 2200px) {
+    .name {
+        font-size: 2em;
+        margin-top: 300px;
+    }
+    }
+
+.text:hover {
+    color: #325b70;
+    outline-color: aquamarine;
+    /* text-shadow: 0 0 10px rgb(82, 157, 255), 0 0 20px #fff; */
+    transform: translateY(-5%);
+}
+
+
+
+.blobs {
+    /* position: absolute; */
+    z-index: -1;
+    height: auto;
+    width: 100%;
+} 
+
